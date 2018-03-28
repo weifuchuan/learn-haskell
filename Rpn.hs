@@ -1,3 +1,8 @@
+-- 逆波兰表达式计算器
+-- example: eval "1 2 +"
+--          eval "1 2 3 * +"
+--          eval "1 2 3 4 5 - + / *"
+
 module Rpn(
 eval
 )where
@@ -20,5 +25,3 @@ op = Map.fromList [
   , ("-", (\(a:b:[]) -> b-a, 2))
   , ("*", (\(a:b:[]) -> b*a, 2))
   , ("/", (\(a:b:[]) -> b/a, 2))]
-
-  
